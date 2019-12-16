@@ -3,7 +3,10 @@ const Schema = mongoose.Schema
 
 const MahasiswaSchema = new Schema({
 npm: {
-    type: String
+    type: String,
+    indexes: {
+        unique: true
+    }
 },
 password: {
     type: String

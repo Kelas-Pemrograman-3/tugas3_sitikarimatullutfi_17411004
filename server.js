@@ -30,7 +30,6 @@ server.use(bodyParser.urlencoded({
 // list router
 server.use('/mahasiswa', require('./routes/mahasiswaroutes'))
 server.use('/matakuliah', require('./routes/matakuliahroute'))
-server.use('/dosen', require('../routes/dosenroute'))
 
 server.listen(port, function() {
      console.log('server started on port' + port)

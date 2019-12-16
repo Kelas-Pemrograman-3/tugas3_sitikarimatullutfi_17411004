@@ -1,13 +1,13 @@
-const dosenmodel = require('../models/dosenmodel/')
+const dosenmodel = require('../models/dosenmodel')
 const mongoose = require('mongoose')
 
 exports.simpan = (data) =>
 new Promise((resolve, reject)=>{
     dosenmodel.create(data)
-    .then(res =>{
+    .then(res => {
         resolve({error:false, pesan: 'data tersimpan'})
     })
-    .catch(res =>{
+    .catch(res => {
         reject({error:true, pesan: 'data tidak tersimpan'})
     })
 })
